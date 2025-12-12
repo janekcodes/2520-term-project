@@ -1,3 +1,6 @@
+import jwt from "jsonwebtoken";
+const JWT_SECRET = "secret";
+// adding imports 
 const DEFAULT_HEADER = {
   "content-type": "application/json",
   "Access-Control-Allow-Origin": "*",
@@ -14,13 +17,12 @@ function verifyToken(token) {
 }
 
 function getUserFromRequest(req, res) {
-  const authHeader = req.headers["authorization"];
+  const authHeader =
+    req.headers["authorization"] || req.headers["Authorization"];
 
   if (!authHeader || !authHeader.startsWith("Bearer ")) {
     res.writeHead(401, DEFAULT_HEADER);
-    res.end(
-      JSON.stringify({ error: "Missing or invalid Authorization header" })
-    );
+    res.end(JSON.stringify({ error: "Missing or invalid Authorization header" }));
     return null;
   }
 
@@ -33,6 +35,7 @@ function getUserFromRequest(req, res) {
     return null;
   }
 
+  
   return payload;
 }
 

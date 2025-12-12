@@ -3,6 +3,7 @@ import { authRoutes, tipRoutes } from "./routes/index.js";
 import { tipService, authService } from "./services/index.js";
 import { DEFAULT_HEADER } from "./util/util.js";
 
+
 const allRoutes = {
   ...tipRoutes({ tipService, authService }),
   ...authRoutes({ authService }),
@@ -13,6 +14,7 @@ const allRoutes = {
   },
 };
 
+
 function handler(request, response) {
   const { url, method } = request;
 
@@ -21,6 +23,7 @@ function handler(request, response) {
     response.writeHead(204, DEFAULT_HEADER);
     return response.end();
   }
+
 
   const { pathname } = parse(url, true);
 
@@ -32,9 +35,11 @@ function handler(request, response) {
   );
 }
 
+
+
 function handlerError(response) {
   return (error) => {
-    console.log("Something went wrong**", error.stack);
+    console.log("Something went wrong", error.stack);
     response.writeHead(500, DEFAULT_HEADER);
     response.write(
       JSON.stringify({
@@ -45,5 +50,6 @@ function handlerError(response) {
     return response.end();
   };
 }
+
 
 export default handler;

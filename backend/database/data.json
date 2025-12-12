@@ -1,4 +1,49 @@
 {
-  "users": [],
-  "tips": []
+  "users": [
+    {
+      "id": "7c08229a-9f3f-4571-b63b-fc64197639eb",
+      "username": "avatarUser",
+      "password": "pass",
+      "profilePicture": "https://example.com/avatar.png"
+    },
+    {
+      "id": "ec4b82b2-ab8c-47b3-95c8-9adf5861a728",
+      "username": "janekbasi",
+      "password": "password",
+      "profilePicture": ""
+    },
+    {
+      "id": "2e71687c-b600-4b09-b14b-19104e39750f",
+      "username": "mytestuser",
+      "password": "password",
+      "profilePicture": ""
+    }
+  ],
+  "tips": [
+    {
+      "id": "f688f4b7-135b-49ac-a775-d20154cf4bab",
+      "title": "Tip with avatar",
+      "userId": "7c08229a-9f3f-4571-b63b-fc64197639eb"
+    },
+    {
+      "id": "14d969df-e96b-4342-b5d3-6e975f83dc4b",
+      "title": "YAY! worked on my account, i will try to add a new one from a different user",
+      "userId": "ec4b82b2-ab8c-47b3-95c8-9adf5861a728"
+    },
+    {
+      "id": "d092c6f4-1bed-4495-9efd-09a58b8318c1",
+      "title": "deletion works and editing! checked to see live update in data.json",
+      "userId": "ec4b82b2-ab8c-47b3-95c8-9adf5861a728"
+    },
+    {
+      "id": "f9a00612-ac13-4497-b172-ecd03111343b",
+      "title": "adding tip from a new user!",
+      "userId": "2e71687c-b600-4b09-b14b-19104e39750f"
+    },
+    {
+      "id": "16e50cde-1030-4df5-93c7-8cb9429792cd",
+      "title": "awesome all works!",
+      "userId": "2e71687c-b600-4b09-b14b-19104e39750f"
+    }
+  ]
 }
